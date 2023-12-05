@@ -1,0 +1,287 @@
+/* :root {
+    --body_backgroud : black;
+    --body_color: white;
+    --link_color: navy;
+    --text-light_color: rgba(255 255 255 0.4);
+    --div-background_color: rgb(18 18 26)
+} */
+
+ [data-theme = "dark"] {
+    --body_background: black;
+    --body_color: white;
+    --link_color: cyan;
+    --text-light_color: rgba(255, 255, 255, 0.4);
+    --div-background_color: rgb(18 18 26);
+    --tradeaa-border-color: rgba(255, 255, 255, .1);
+    --button-background_color: rgba(255, 255, 255, .1);
+    --table-header_color: rgba(255, 255, 255, .5);
+    --tradebb-background-buy_color : rgba(0, 255, 0, .1);
+    --tradebb-background-sell_color: rgba(255, 0, 0, .1);
+    --tradebb-formcontent_color: rgba(255, 255, 255, .05);
+    --sideconnected_color: #19181F;
+    --sideconnected-border_color: black;
+    --orderbook_background_color: #12121A;
+    --chart_color: #12121A;
+    --sidebutton_color : 
+
+}
+[data-theme = "light"] {
+    --body_background: #fcfcfc;
+    --body_color: rgb(0, 0, 0);
+    --link_color: cyan;
+    --text-light_color: rgba(0 0 0 .4);
+    --div-background_color: #dee4e7;
+    --tradeaa-border-color: rgba(0, 0, 0, 0.331);
+    --button-background_color: rgba(105, 104, 109, 0.331);
+    --table-header_color: rgba(0, 0, 0, 0.331);
+    --tradebb-background-buy_color : rgb(118, 169, 118);
+    --tradebb-background-sell_color: rgb(222, 159, 159);
+    --tradebb-formcontent_color: rgba(105, 104, 109, 0.331);
+    --sideconnected_color: rgba(0, 0, 0, 0.1);
+    --sideconnected-border_color: #19181F;
+    --orderbook_background_color: #dee4e7;
+    --chart_color: #dee4e7;
+}
+.layout{
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgb(0 0 0); */
+    background-color: var(--body_background);
+    overflow: auto;
+
+}
+
+/* =========== header ================== */
+.tnav {
+    height: 5vh;
+    display: flex;
+    margin-top: .5rem;
+    justify-content: space-between;
+}
+
+.tnav .logo {
+    height: 100%;
+}
+
+.tnav .logo img {
+    height: 100%;
+}
+
+.navlink1 {
+    height: 100%;
+    display: flex;
+}
+
+.navlink3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navlink3 a {
+    /* color: rgba(255, 255, 255, 0.6); */
+    color: var(--body_color);
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 1rem 0 0;
+}
+
+.Navactive {
+    /* color: whitesmoke; */
+    color: var(--text-light_color);
+    font-weight: 600;
+}
+
+.navlink2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    font-size: 1rem;
+    /* color: white; */
+    color: var(--body_color);
+    text-decoration: none;
+}
+
+.navnums {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+.navnum {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 0 0;
+}
+
+.navnum .head {
+    /* color: rgba(255, 255, 255, 0.4); */
+    color: var(--text-light_color);
+    font-size: 0.8rem;
+}
+
+.tnav .connect {
+    /* background-color: rgb(18 18 26); */
+    background-color: var(--div-background_color);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    border: .5px transparent solid;
+}
+
+.tnav .connect:hover {
+    border: .5px var(--div-background_color) solid;
+}
+
+/* =========== footer ================== */
+.footer {
+    margin: 0;
+    height: 2vh;
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.footer .status{
+    display: flex;
+    align-items: center;
+    width: .4rem;
+    height:.4rem;
+    border-radius: 100%;
+    margin: 0 .3rem 0 0;
+    position: absolute;
+    margin-left: -1rem;
+    top: 40%;
+}
+
+.operational{
+    color: #daffdae6;
+}
+
+.operational .status{
+    background-color: #00ff00;
+}
+
+.notoperational{
+    color: #ffb4b4;
+}
+
+.notoperational .status{
+    background-color: #ff0000;
+}
+
+.footer .time{
+    margin-left: 1rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: .8rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 1rem 1rem 0;
+    cursor: default;
+}
+
+.footer .time p{
+    margin-left: .5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.dark_mode {
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.dark_mode_label {
+    width: 65px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+        inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.dark_mode_label:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.dark_mode_input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #242424;
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+    left: 62px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_label:active:after {
+    width: 30px;
+}
+
+.dark_mode_label svg {
+    position: absolute;
+    width: 20px;
+    top: 5px;
+    z-index: 100;
+}
+
+.sun {
+    display: flex;
+    margin-left: 5px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.Moon {
+    display: flex;
+    fill: #7e7e7e;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+.dark_mode_input:checked + .dark_mode_label svg.sun {
+    fill: #7e7e7e;
+}
+.dark_mode_input:checked + .dark_mode_label svg.moon {
+    fill: #fff;
+}
